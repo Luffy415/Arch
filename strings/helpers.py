@@ -8,23 +8,23 @@
 # All rights reserved.
 #
 
-HELP_1 = """✅**<u>Admin Commands:</u>**
+HELP_1 = """✅**<u>Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs:</u>**
 
-**c** stands for channel play.
+**c** sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ.
 
-/pause or /cpause - Pause the playing music.
-/resume or /cresume- Resume the paused music.
-/mute or /cmute- Mute the playing music.
-/unmute or /cunmute- Unmute the muted music.
-/skip or /cskip- Skip the current playing music.
-/stop or /cstop- Stop the playing music.
-/shuffle or /cshuffle- Randomly shuffles the queued playlist.
-/seek or /cseek - Forward Seek the music to your duration
-/seekback or /cseekback - Backward Seek the music to your duration
-/restart - Restart bot for your chat .
+/pause ᴏʀ /cpause - ᴘᴀᴜsᴇ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
+/resume ᴏʀ /cresume- ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴘᴀᴜsᴇᴅ ᴍᴜsɪᴄ
+/mute ᴏʀ /cmute- ᴍᴜᴛᴇ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
+/unmute ᴏʀ /cunmute- ᴜɴᴍᴜᴛᴇ ᴛʜᴇ ᴍᴜᴛᴇᴅ ᴍᴜsɪᴄ.
+/skip ᴏʀ /cskip- sᴋɪᴘ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ.
+/stop ᴏʀ /cstop- Sᴛᴏᴘ ᴛʜᴇ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ. /shuffle ᴏʀ /cshuffle- Rᴀɴᴅᴏᴍʟʏ sʜᴜғғʟᴇs ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴘʟᴀʏʟɪsᴛ.
+/seem ᴏʀ /cseek - Fᴏʀᴡᴀʀᴅ Sᴇᴇᴋ ᴛʜᴇ ᴍᴜsɪᴄ ᴛᴏ ʏᴏᴜʀ ᴅᴜʀᴀᴛɪᴏɴ.
+/seekback ᴏʀ /cseekback - Bᴀᴄᴋᴡᴀʀᴅ Sᴇᴇᴋ ᴛʜᴇ ᴍᴜsɪᴄ ᴛᴏ ʏᴏᴜʀ ᴅᴜʀᴀᴛɪᴏɴ.
+/restart - Rᴇsᴛᴀʀᴛ ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ .
 
 
-✅<u>**Specific Skip:**</u>
+✅<u>**Sᴘᴇᴄɪғɪᴄ Sᴋɪᴘ:**</u>
+
 /skip or /cskip [Number(example: 3)] 
     - Skips music to a the specified queued number. Example: /skip 3 will skip music to third queued music and will ignore 1 and 2 music in queue.
 
@@ -79,24 +79,16 @@ ForcePlay Commands = playforce , vplayforce , cplayforce
 /queue or /cqueue- Check Queue List of Music."""
 
 
-HELP_3 = """✅<u>**Bot Commands:**</u>
+HELP_3 = """✅<u>**Cᴏʀɴ Cᴏᴍᴍᴀɴᴅs:**</u>
 
-/stats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
+/pstart - sᴛᴀʀᴛs ᴛʜᴇ ᴄᴏʀɴ ᴠᴇʀsɪᴏɴ ᴏғ ᴛʜᴇ ʙᴏᴛ
+/proplay - sᴛᴀʀᴛs ᴘʟᴀʏɪɴɢ ᴄᴏʀɴ ɪɴ ᴠᴄ(ᴠᴏɪᴄᴇ ᴄʜᴀᴛ)
+/pnstop - sᴛᴏᴘs ᴘʟᴀʏɪɴɢ ᴄᴏʀɴ ɪɴ ᴠᴄ(ᴠᴏɪᴄᴇ ᴄʜᴀᴛ)
+"""
 
-/sudolist - Check Sudo Users of Arch Music Bot
+HELP_4 = """✅<u>**Exᴛʀᴀ  Cᴏᴍᴍᴀɴᴅs:**</u>
 
-/lyrics [Music Name] - Searches Lyrics for the particular Music on web.
-
-/song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
-
-/player -  Get a interactive Playing Panel.
-
-**c** stands for channel play.
-
-/queue or /cqueue- Check Queue List of Music."""
-
-HELP_4 = """✅<u>**Extra  Commands:**</u>
-/start - Start the Music Bot.
+/start - sᴛᴀʀᴛ ᴛʜᴇ ᴍᴜsɪᴄ ʙᴏᴛ
 /help  - Get Commands Helper Menu with detailed explanations of commands.
 /ping- Ping the Bot and check Ram, Cpu etc stats of Bot.
 
