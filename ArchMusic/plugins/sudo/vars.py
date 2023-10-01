@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -14,10 +14,10 @@ from pyrogram import filters
 
 import config
 from strings import get_command
-from ArchMusic import app
-from ArchMusic.misc import SUDOERS
-from ArchMusic.utils.database.memorydatabase import get_video_limit
-from ArchMusic.utils.formatters import convert_bytes
+from ZenMusic import app
+from ZenMusic.misc import SUDOERS
+from ZenMusic.utils.database.memorydatabase import get_video_limit
+from ZenMusic.utils.formatters import convert_bytes
 
 VARS_COMMAND = get_command("VARS_COMMAND")
 

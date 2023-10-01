@@ -1,11 +1,11 @@
-# ArchMusicBot Configs
+# ZenMusicBot Configs
 
 Config vars are basically the variables which configure or modify bot to function, which are the basic necessities of plugins or code to work. You have to set the proper mandatory vars to make it functional and to start the basic feature of bot.
 
 
 ## Mandatory Vars
 
-- These are the minimum required vars need to setup to make ArchMusic Bot functional.
+- These are the minimum required vars need to setup to make ZenMusic Bot functional.
 
 1. `API_ID` : Get it from my.telegram.org 
 2. `API_HASH`  : Get it from my.telegram.org 
@@ -55,7 +55,7 @@ Config vars are basically the variables which configure or modify bot to functio
 
 ## Spotify Vars
 
-- You can play tracks or playlists from spotify from ArchMusic bot
+- You can play tracks or playlists from spotify from ZenMusic bot
 - You'll need these two vars to make spotify play working. This is not essential , you can leave them blank if you want.
 
 
@@ -75,7 +75,7 @@ Config vars are basically the variables which configure or modify bot to functio
 
 ## Custom Repo Vars
 
-- If you plan to use ArchMusic Bot with your own customized or modified code.
+- If you plan to use ZenMusic Bot with your own customized or modified code.
 
 1. `UPSTREAM_REPO` : Your Upstream Repo URL or Forked Repo.
 2. `UPSTREAM_BRANCH` : Default Branch of your Upstream Repo URL or Forked Repo. 

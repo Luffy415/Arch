@@ -1,16 +1,16 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
 
 from config import LOG, LOG_GROUP_ID, MUSIC_BOT_NAME
-from ArchMusic import app
-from ArchMusic.utils.database import is_on_off
+from ZenMusic import app
+from ZenMusic.utils.database import is_on_off
 
 
 async def play_logs(message, streamtype):

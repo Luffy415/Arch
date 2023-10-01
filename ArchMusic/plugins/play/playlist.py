@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -18,16 +18,16 @@ from pyrogram.types import (InlineKeyboardButton,
 
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from strings import get_command
-from ArchMusic import Carbon, YouTube, app
-from ArchMusic.utils.database import (delete_playlist, get_playlist,
+from ZenMusic import Carbon, YouTube, app
+from ZenMusic.utils.database import (delete_playlist, get_playlist,
                                        get_playlist_names,
                                        save_playlist)
-from ArchMusic.utils.decorators.language import language, languageCB
-from ArchMusic.utils.inline.playlist import (botplaylist_markup,
+from ZenMusic.utils.decorators.language import language, languageCB
+from ZenMusic.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from ArchMusic.utils.pastebin import ArchMusicbin
-from ArchMusic.utils.stream.stream import stream
+from ZenMusic.utils.pastebin import ZenMusicbin
+from ZenMusic.utils.stream.stream import stream
 
 # Command
 PLAYLIST_COMMAND = get_command("PLAYLIST_COMMAND")
@@ -55,7 +55,7 @@ async def check_playlist(client, message: Message, _):
         count += 1
         msg += f"\n\n{count}- {title[:70]}\n"
         msg += _["playlist_5"].format(duration)
-    link = await ArchMusicbin(msg)
+    link = await ZenMusicbin(msg)
     lines = msg.count("\n")
     if lines >= 17:
         car = os.linesep.join(msg.split(os.linesep)[:17])

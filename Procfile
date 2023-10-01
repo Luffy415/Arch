@@ -1,1 +1,1 @@
-worker: python3 -m ArchMusic
+worker: python3 -m ZenMusic

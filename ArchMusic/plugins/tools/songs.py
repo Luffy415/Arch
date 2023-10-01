@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -22,10 +22,10 @@ from pyrogram.types import (InlineKeyboardButton,
 from config import (BANNED_USERS, SONG_DOWNLOAD_DURATION,
                     SONG_DOWNLOAD_DURATION_LIMIT)
 from strings import get_command
-from ArchMusic import YouTube, app
-from ArchMusic.utils.decorators.language import language, languageCB
-from ArchMusic.utils.formatters import convert_bytes
-from ArchMusic.utils.inline.song import song_markup
+from ZenMusic import YouTube, app
+from ZenMusic.utils.decorators.language import language, languageCB
+from ZenMusic.utils.formatters import convert_bytes
+from ZenMusic.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")
@@ -193,7 +193,7 @@ async def song_helper_cb(client, CallbackQuery, _):
             print(e)
             return await CallbackQuery.edit_message_text(_["song_7"])
         keyboard = InlineKeyboard()
-        # AVC Formats Only [ ArchMusic Bot]
+        # AVC Formats Only [ ZenMusic Bot]
         done = [160, 133, 134, 135, 136, 137, 298, 299, 264, 304, 266]
         for x in formats_available:
             check = x["format"]

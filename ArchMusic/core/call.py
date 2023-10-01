@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -29,9 +29,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from ArchMusic import LOGGER, YouTube, app
-from ArchMusic.misc import db
-from ArchMusic.utils.database import (add_active_chat,
+from ZenMusic import LOGGER, YouTube, app
+from ZenMusic.misc import db
+from ZenMusic.utils.database import (add_active_chat,
                                        add_active_video_chat,
                                        get_assistant,
                                        get_audio_bitrate, get_lang,
@@ -41,11 +41,11 @@ from ArchMusic.utils.database import (add_active_chat,
                                        remove_active_chat,
                                        remove_active_video_chat,
                                        set_loop)
-from ArchMusic.utils.exceptions import AssistantErr
-from ArchMusic.utils.inline.play import (stream_markup,
+from ZenMusic.utils.exceptions import AssistantErr
+from ZenMusic.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from ArchMusic.utils.stream.autoclear import auto_clean
-from ArchMusic.utils.thumbnails import gen_thumb
+from ZenMusic.utils.stream.autoclear import auto_clean
+from ZenMusic.utils.thumbnails import gen_thumb
 
 autoend = {}
 counter = {}
@@ -61,7 +61,7 @@ async def _clear_(chat_id):
 class Call(PyTgCalls):
     def __init__(self):
         self.userbot1 = Client(
-            "ArchMusicString1",
+            "ZenMusicString1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
@@ -71,7 +71,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot2 = Client(
-            "ArchMusicString2",
+            "ZenMusicString2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
@@ -81,7 +81,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot3 = Client(
-            "ArchMusicString3",
+            "ZenMusicString3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
@@ -91,7 +91,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot4 = Client(
-            "ArchMusicString4",
+            "ZenMusicString4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
@@ -101,7 +101,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot5 = Client(
-            "ArchMusicString5",
+            "ZenMusicString5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
@@ -630,4 +630,4 @@ class Call(PyTgCalls):
                 autoend[chat_id] = {}
 
 
-ArchMusic = Call()
+ZenMusic = Call()

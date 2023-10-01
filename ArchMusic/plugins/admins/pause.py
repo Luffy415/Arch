@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -13,10 +13,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from ArchMusic import app
-from ArchMusic.core.call import ArchMusic
-from ArchMusic.utils.database import is_music_playing, music_off
-from ArchMusic.utils.decorators import AdminRightsCheck
+from ZenMusic import app
+from ZenMusic.core.call import ZenMusic
+from ZenMusic.utils.database import is_music_playing, music_off
+from ZenMusic.utils.decorators import AdminRightsCheck
 
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
@@ -34,7 +34,7 @@ async def pause_admin(cli, message: Message, _, chat_id):
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_1"])
     await music_off(chat_id)
-    await ArchMusic.pause_stream(chat_id)
+    await ZenMusic.pause_stream(chat_id)
     await message.reply_text(
         _["admin_2"].format(message.from_user.mention)
     )

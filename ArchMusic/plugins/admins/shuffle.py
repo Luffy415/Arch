@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -15,9 +15,9 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from ArchMusic import app
-from ArchMusic.misc import db
-from ArchMusic.utils.decorators import AdminRightsCheck
+from ZenMusic import app
+from ZenMusic.misc import db
+from ZenMusic.utils.decorators import AdminRightsCheck
 
 # Commands
 SHUFFLE_COMMAND = get_command("SHUFFLE_COMMAND")

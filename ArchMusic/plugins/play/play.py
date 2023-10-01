@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -20,21 +20,21 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS, lyrical
 from strings import get_command
-from ArchMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
+from ZenMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
-from ArchMusic.core.call import ArchMusic
-from ArchMusic.utils import seconds_to_min, time_to_seconds
-from ArchMusic.utils.channelplay import get_channeplayCB
-from ArchMusic.utils.database import is_video_allowed
-from ArchMusic.utils.decorators.language import languageCB
-from ArchMusic.utils.decorators.play import PlayWrapper
-from ArchMusic.utils.formatters import formats
-from ArchMusic.utils.inline.play import (livestream_markup,
+from ZenMusic.core.call import ZenMusic
+from ZenMusic.utils import seconds_to_min, time_to_seconds
+from ZenMusic.utils.channelplay import get_channeplayCB
+from ZenMusic.utils.database import is_video_allowed
+from ZenMusic.utils.decorators.language import languageCB
+from ZenMusic.utils.decorators.play import PlayWrapper
+from ZenMusic.utils.formatters import formats
+from ZenMusic.utils.inline.play import (livestream_markup,
                                           playlist_markup,
                                           slider_markup, track_markup)
-from ArchMusic.utils.inline.playlist import botplaylist_markup
-from ArchMusic.utils.logger import play_logs
-from ArchMusic.utils.stream.stream import stream
+from ZenMusic.utils.inline.playlist import botplaylist_markup
+from ZenMusic.utils.logger import play_logs
+from ZenMusic.utils.stream.stream import stream
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
@@ -335,7 +335,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await ArchMusic.stream_call(url)
+                await ZenMusic.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
                     "There's an issue with the bot. Please report it to my owner and ask them to check logger group."
@@ -599,7 +599,7 @@ async def anonymous_check(client, CallbackQuery):
 
 
 @app.on_callback_query(
-    filters.regex("ArchMusicPlaylists") & ~BANNED_USERS
+    filters.regex("ZenMusicPlaylists") & ~BANNED_USERS
 )
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):

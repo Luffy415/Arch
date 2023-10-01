@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -15,20 +15,20 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from ArchMusic import Carbon, YouTube, app
-from ArchMusic.core.call import ArchMusic
-from ArchMusic.misc import db
-from ArchMusic.utils.database import (add_active_chat,
+from ZenMusic import Carbon, YouTube, app
+from ZenMusic.core.call import ZenMusic
+from ZenMusic.misc import db
+from ZenMusic.utils.database import (add_active_chat,
                                        add_active_video_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
-from ArchMusic.utils.exceptions import AssistantErr
-from ArchMusic.utils.inline.play import (stream_markup,
+from ZenMusic.utils.exceptions import AssistantErr
+from ZenMusic.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from ArchMusic.utils.inline.playlist import close_markup
-from ArchMusic.utils.pastebin import ArchMusicbin
-from ArchMusic.utils.stream.queue import put_queue, put_queue_index
-from ArchMusic.utils.thumbnails import gen_thumb
+from ZenMusic.utils.inline.playlist import close_markup
+from ZenMusic.utils.pastebin import ZenMusicbin
+from ZenMusic.utils.stream.queue import put_queue, put_queue_index
+from ZenMusic.utils.thumbnails import gen_thumb
 
 
 async def stream(
@@ -50,7 +50,7 @@ async def stream(
         if not await is_video_allowed(chat_id):
             raise AssistantErr(_["play_7"])
     if forceplay:
-        await ArchMusic.force_stop_stream(chat_id)
+        await ZenMusic.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['playlist_16']}\n\n"
         count = 0
@@ -99,7 +99,7 @@ async def stream(
                     )
                 except:
                     raise AssistantErr(_["play_16"])
-                await ArchMusic.join_call(
+                await ZenMusic.join_call(
                     chat_id, original_chat_id, file_path, video=status
                 )
                 await put_queue(
@@ -130,7 +130,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await ArchMusicbin(msg)
+            link = await ZenMusicbin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -180,7 +180,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await ArchMusic.join_call(
+            await ZenMusic.join_call(
                 chat_id, original_chat_id, file_path, video=status
             )
             await put_queue(
@@ -234,7 +234,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await ArchMusic.join_call(
+            await ZenMusic.join_call(
                 chat_id, original_chat_id, file_path, video=None
             )
             await put_queue(
@@ -288,7 +288,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await ArchMusic.join_call(
+            await ZenMusic.join_call(
                 chat_id, original_chat_id, file_path, video=status
             )
             await put_queue(
@@ -349,7 +349,7 @@ async def stream(
             n, file_path = await YouTube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await ArchMusic.join_call(
+            await ZenMusic.join_call(
                 chat_id, original_chat_id, file_path, video=status
             )
             await put_queue(
@@ -401,7 +401,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await ArchMusic.join_call(
+            await ZenMusic.join_call(
                 chat_id,
                 original_chat_id,
                 link,

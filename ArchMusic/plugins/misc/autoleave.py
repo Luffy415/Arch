@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -13,9 +13,9 @@ from datetime import datetime
 
 import config
 from pyrogram.enums import ChatType
-from ArchMusic import app
-from ArchMusic.core.call import ArchMusic, autoend
-from ArchMusic.utils.database import (get_client, is_active_chat,
+from ZenMusic import app
+from ZenMusic.core.call import ZenMusic, autoend
+from ZenMusic.utils.database import (get_client, is_active_chat,
                                        is_autoend)
 
 
@@ -24,7 +24,7 @@ async def auto_leave():
         while not await asyncio.sleep(
             config.AUTO_LEAVE_ASSISTANT_TIME
         ):
-            from ArchMusic.core.userbot import assistants
+            from ZenMusic.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)
@@ -75,7 +75,7 @@ async def auto_end():
                     continue
                 autoend[chat_id] = {}
                 try:
-                    await ArchMusic.stop_stream(chat_id)
+                    await ZenMusic.stop_stream(chat_id)
                 except:
                     continue
                 try:

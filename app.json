@@ -9,7 +9,7 @@
         "telegram-bot",
         "pyrogram",
         "ArchBots",
-        "ArchMusic"
+        "ZenMusic"
     ],
     "stack": "container",
     "env": {
@@ -34,7 +34,7 @@
             "required": true
         },
         "MONGO_DB_URI": {
-            "description": "Get a mongodb url from https://cloud.mongodb.com. You can leave it blank if you want, bot will use ArchMusic's database for you.",
+            "description": "Get a mongodb url from https://cloud.mongodb.com. You can leave it blank if you want, bot will use ZenMusic's database for you.",
             "value": "",
             "required": true
         },
@@ -70,7 +70,7 @@
         },
         "UPSTREAM_REPO": {
             "description": "If you dont know this, Leave as it is",
-            "value": "https://github.com/ArchBots/ArchMusicBot",
+            "value": "https://github.com/ArchBots/ZenMusicBot",
             "required": true
         }
     },

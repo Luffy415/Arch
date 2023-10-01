@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -13,15 +13,15 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from ArchMusic import YouTube, app
-from ArchMusic.core.call import ArchMusic
-from ArchMusic.misc import db
-from ArchMusic.utils.database import get_loop
-from ArchMusic.utils.decorators import AdminRightsCheck
-from ArchMusic.utils.inline.play import (stream_markup,
+from ZenMusic import YouTube, app
+from ZenMusic.core.call import ZenMusic
+from ZenMusic.misc import db
+from ZenMusic.utils.database import get_loop
+from ZenMusic.utils.decorators import AdminRightsCheck
+from ZenMusic.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from ArchMusic.utils.stream.autoclear import auto_clean
-from ArchMusic.utils.thumbnails import gen_thumb
+from ZenMusic.utils.stream.autoclear import auto_clean
+from ZenMusic.utils.thumbnails import gen_thumb
 
 # Commands
 SKIP_COMMAND = get_command("SKIP_COMMAND")
@@ -68,7 +68,7 @@ async def skip(cli, message: Message, _, chat_id):
                                             message.from_user.first_name
                                         )
                                     )
-                                    await ArchMusic.stop_stream(chat_id)
+                                    await ZenMusic.stop_stream(chat_id)
                                 except:
                                     return
                                 break
@@ -95,7 +95,7 @@ async def skip(cli, message: Message, _, chat_id):
                     _["admin_10"].format(message.from_user.first_name)
                 )
                 try:
-                    return await ArchMusic.stop_stream(chat_id)
+                    return await ZenMusic.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -103,7 +103,7 @@ async def skip(cli, message: Message, _, chat_id):
                 await message.reply_text(
                     _["admin_10"].format(message.from_user.first_name)
                 )
-                return await ArchMusic.stop_stream(chat_id)
+                return await ZenMusic.stop_stream(chat_id)
             except:
                 return
     queued = check[0]["file"]
@@ -119,7 +119,7 @@ async def skip(cli, message: Message, _, chat_id):
                 _["admin_11"].format(title)
             )
         try:
-            await ArchMusic.skip_stream(chat_id, link, video=status)
+            await ZenMusic.skip_stream(chat_id, link, video=status)
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
@@ -148,7 +148,7 @@ async def skip(cli, message: Message, _, chat_id):
         except:
             return await mystic.edit_text(_["call_9"])
         try:
-            await ArchMusic.skip_stream(chat_id, file_path, video=status)
+            await ZenMusic.skip_stream(chat_id, file_path, video=status)
         except Exception:
             return await mystic.edit_text(_["call_9"])
         button = stream_markup(_, videoid, chat_id)
@@ -166,7 +166,7 @@ async def skip(cli, message: Message, _, chat_id):
         await mystic.delete()
     elif "index_" in queued:
         try:
-            await ArchMusic.skip_stream(chat_id, videoid, video=status)
+            await ZenMusic.skip_stream(chat_id, videoid, video=status)
         except Exception:
             return await message.reply_text(_["call_9"])
         button = telegram_markup(_, chat_id)
@@ -179,7 +179,7 @@ async def skip(cli, message: Message, _, chat_id):
         db[chat_id][0]["markup"] = "tg"
     else:
         try:
-            await ArchMusic.skip_stream(chat_id, queued, video=status)
+            await ZenMusic.skip_stream(chat_id, queued, video=status)
         except Exception:
             return await message.reply_text(_["call_9"])
         if videoid == "telegram":

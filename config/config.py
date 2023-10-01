@@ -70,7 +70,7 @@ UPSTREAM_REPO = getenv(
 
     "UPSTREAM_REPO",
 
-    "https://github.com/ArchBots/ArchMusic",
+    "https://github.com/ArchBots/ZenMusic",
 
 )
 
@@ -202,7 +202,7 @@ YTDOWNLOADER = 1
 
 LOG = 2
 
-LOG_FILE_NAME = "ArchMusiclogs.txt"
+LOG_FILE_NAME = "ZenMusiclogs.txt"
 
 adminlist = {}
 

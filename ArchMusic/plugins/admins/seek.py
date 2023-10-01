@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -13,10 +13,10 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from strings import get_command
-from ArchMusic import YouTube, app
-from ArchMusic.core.call import ArchMusic
-from ArchMusic.misc import db
-from ArchMusic.utils import AdminRightsCheck, seconds_to_min
+from ZenMusic import YouTube, app
+from ZenMusic.core.call import ZenMusic
+from ZenMusic.misc import db
+from ZenMusic.utils import AdminRightsCheck, seconds_to_min
 
 # Commands
 SEEK_COMMAND = get_command("SEEK_COMMAND")
@@ -70,7 +70,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
         if n == 0:
             return await message.reply_text(_["admin_30"])
     try:
-        await ArchMusic.seek_stream(
+        await ZenMusic.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),

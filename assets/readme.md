@@ -1,4 +1,4 @@
-## ArchMusic Assets Folder
+## ZenMusic Assets Folder
 
 # Contains all the fonts and thumb related files.
 

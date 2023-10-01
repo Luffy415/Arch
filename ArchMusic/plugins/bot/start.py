@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -20,18 +20,18 @@ import config
 from config import BANNED_USERS
 from config.config import OWNER_ID
 from strings import get_command, get_string
-from ArchMusic import Telegram, YouTube, app
-from ArchMusic.misc import SUDOERS
-from ArchMusic.plugins.play.playlist import del_plist_msg
-from ArchMusic.plugins.sudo.sudoers import sudoers_list
-from ArchMusic.utils.database import (add_served_chat,
+from ZenMusic import Telegram, YouTube, app
+from ZenMusic.misc import SUDOERS
+from ZenMusic.plugins.play.playlist import del_plist_msg
+from ZenMusic.plugins.sudo.sudoers import sudoers_list
+from ZenMusic.utils.database import (add_served_chat,
                                        add_served_user,
                                        blacklisted_chats,
                                        get_assistant, get_lang,
                                        get_userss, is_on_off,
                                        is_served_private_chat)
-from ArchMusic.utils.decorators.language import LanguageStart
-from ArchMusic.utils.inline import (help_pannel, private_panel,
+from ZenMusic.utils.decorators.language import LanguageStart
+from ZenMusic.utils.inline import (help_pannel, private_panel,
                                      start_pannel)
 
 loop = asyncio.get_running_loop()

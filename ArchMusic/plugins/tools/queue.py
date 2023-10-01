@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -19,14 +19,14 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from ArchMusic import app
-from ArchMusic.misc import db
-from ArchMusic.utils import (ArchMusicbin, get_channeplayCB,
+from ZenMusic import app
+from ZenMusic.misc import db
+from ZenMusic.utils import (ZenMusicbin, get_channeplayCB,
                               seconds_to_min)
-from ArchMusic.utils.database import (get_cmode, is_active_chat,
+from ZenMusic.utils.database import (get_cmode, is_active_chat,
                                        is_music_playing)
-from ArchMusic.utils.decorators.language import language, languageCB
-from ArchMusic.utils.inline import queue_back_markup, queue_markup
+from ZenMusic.utils.decorators.language import language, languageCB
+from ZenMusic.utils.inline import queue_back_markup, queue_markup
 
 ###Commands
 QUEUE_COMMAND = get_command("QUEUE_COMMAND")
@@ -219,7 +219,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             )
         if "🏷" in msg:
             msg = msg.replace("🏷", "")
-        link = await ArchMusicbin(msg)
+        link = await ZenMusicbin(msg)
         med = InputMediaPhoto(
             media=link, caption=_["queue_3"].format(link)
         )

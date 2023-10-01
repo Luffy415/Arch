@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
 #
-# This file is part of < https://github.com/ArchBots/ArchMusic > project,
+# This file is part of < https://github.com/ArchBots/ZenMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ArchMusic/blob/master/LICENSE >
+# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
 #
 # All rights reserved.
 #
@@ -16,23 +16,23 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 from config import (AUTO_DOWNLOADS_CLEAR, BANNED_USERS,
                     SOUNCLOUD_IMG_URL, STREAM_IMG_URL,
                     TELEGRAM_AUDIO_URL, TELEGRAM_VIDEO_URL, adminlist)
-from ArchMusic import YouTube, app
-from ArchMusic.core.call import ArchMusic
-from ArchMusic.misc import SUDOERS, db
-from ArchMusic.utils.database import (is_active_chat,
+from ZenMusic import YouTube, app
+from ZenMusic.core.call import ZenMusic
+from ZenMusic.misc import SUDOERS, db
+from ZenMusic.utils.database import (is_active_chat,
                                        is_music_playing, is_muted,
                                        is_nonadmin_chat, music_off,
                                        music_on, mute_off, mute_on,
                                        set_loop)
-from ArchMusic.utils.decorators.language import languageCB
-from ArchMusic.utils.formatters import seconds_to_min
-from ArchMusic.utils.inline.play import (panel_markup_1,
+from ZenMusic.utils.decorators.language import languageCB
+from ZenMusic.utils.formatters import seconds_to_min
+from ZenMusic.utils.inline.play import (panel_markup_1,
                                           panel_markup_2,
                                           panel_markup_3,
                                           stream_markup,
                                           telegram_markup)
-from ArchMusic.utils.stream.autoclear import auto_clean
-from ArchMusic.utils.thumbnails import gen_thumb
+from ZenMusic.utils.stream.autoclear import auto_clean
+from ZenMusic.utils.thumbnails import gen_thumb
 
 wrong = {}
 
@@ -149,7 +149,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await ArchMusic.pause_stream(chat_id)
+        await ZenMusic.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention)
         )
@@ -160,13 +160,13 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await ArchMusic.resume_stream(chat_id)
+        await ZenMusic.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention)
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await ArchMusic.stop_stream(chat_id)
+        await ZenMusic.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_9"].format(mention)
@@ -178,7 +178,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await mute_on(chat_id)
-        await ArchMusic.mute_stream(chat_id)
+        await ZenMusic.mute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_6"].format(mention)
         )
@@ -189,7 +189,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await mute_off(chat_id)
-        await ArchMusic.unmute_stream(chat_id)
+        await ZenMusic.unmute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_8"].format(mention)
         )
@@ -240,7 +240,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["admin_10"].format(mention)
                 )
                 try:
-                    return await ArchMusic.stop_stream(chat_id)
+                    return await ZenMusic.stop_stream(chat_id)
                 except:
                     return
         except:
@@ -251,7 +251,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 await CallbackQuery.message.reply_text(
                     _["admin_10"].format(mention)
                 )
-                return await ArchMusic.stop_stream(chat_id)
+                return await ZenMusic.stop_stream(chat_id)
             except:
                 return
         await CallbackQuery.answer()
@@ -269,7 +269,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["admin_11"].format(title)
                 )
             try:
-                await ArchMusic.skip_stream(chat_id, link, video=status)
+                await ZenMusic.skip_stream(chat_id, link, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(
                     _["call_9"]
@@ -301,7 +301,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 return await mystic.edit_text(_["call_9"])
             try:
-                await ArchMusic.skip_stream(
+                await ZenMusic.skip_stream(
                     chat_id, file_path, video=status
                 )
             except Exception:
@@ -322,7 +322,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await ArchMusic.skip_stream(
+                await ZenMusic.skip_stream(
                     chat_id, videoid, video=status
                 )
             except Exception:
@@ -340,7 +340,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await CallbackQuery.edit_message_text(txt)
         else:
             try:
-                await ArchMusic.skip_stream(chat_id, queued, video=status)
+                await ZenMusic.skip_stream(chat_id, queued, video=status)
             except Exception:
                 return await CallbackQuery.message.reply_text(
                     _["call_9"]
@@ -435,7 +435,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             if n == 0:
                 return await mystic.edit_text(_["admin_30"])
         try:
-            await ArchMusic.seek_stream(
+            await ZenMusic.seek_stream(
                 chat_id,
                 file_path,
                 seconds_to_min(to_seek),
