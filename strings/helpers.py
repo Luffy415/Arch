@@ -60,7 +60,23 @@ ForcePlay Commands = playforce , vplayforce , cplayforce
 ✅**<u>Bot's Server Playlists:</u>**
 /playlist  - Check Your Saved Playlist On Servers.
 /deleteplaylist - Delete any saved music in your playlist
-/play  - Start playing Your Saved Playlist from Servers."""
+/play  - Start playing Your Saved Playlist from Servers.
+
+✅<u>**Bot Commands:**</u>
+
+/stats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
+
+/sudolist - Check Sudo Users of Arch Music Bot
+
+/lyrics [Music Name] - Searches Lyrics for the particular Music on web.
+
+/song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
+
+/player -  Get a interactive Playing Panel.
+
+**c** stands for channel play.
+
+/queue or /cqueue- Check Queue List of Music."""
 
 
 HELP_3 = """✅<u>**Bot Commands:**</u>
