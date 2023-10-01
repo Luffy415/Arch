@@ -510,7 +510,7 @@ if TELEGRAM_VIDEO_URL:
 
             sys.exit()
 
-if not MUSIC_BOT_NAME.isascii():
+if MUSIC_BOT_NAME.isascii():
 
     print(
 
