@@ -1,12 +1,4 @@
-#
-# Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
-#
-# This file is part of < https://github.com/ArchBots/ZenMusic > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-#
+
 
 HELP_1 = """✅**<u>Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs:</u>**
 
@@ -30,7 +22,7 @@ HELP_1 = """✅**<u>Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs:</u>**
  
 ✅<u>**Aᴜᴛʜ Usᴇʀs:**</u>
 Aᴜᴛʜ Usᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ.  
-/auth [Usᴇʀɴᴀᴍᴇ] - Aᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ. 
+/auth [Usᴇʀɴᴀᴍᴇ] -  ᴀ ᴜsᴇʀ ᴛᴏ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ. 
 /unauth [Usᴇʀɴᴀᴍᴇ] - Rᴇᴍᴏᴠᴇ ᴀ ᴜsᴇʀ ғʀᴏᴍ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ. 
 /authusers - Cʜᴇᴄᴋ AUTH LIST ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ."""
 
@@ -75,12 +67,17 @@ ForcePlay Commands = playforce , vplayforce , cplayforce
 
 HELP_3 = """❎<u>**Cᴏʀɴ Cᴏᴍᴍᴀɴᴅs:**</u>
 
+<i><b>UPCOMING FEATURE 💦</b></i>
+
+"""
+
+
+'''
 /pstart - sᴛᴀʀᴛs ᴛʜᴇ ᴄᴏʀɴ ᴠᴇʀsɪᴏɴ ᴏғ ᴛʜᴇ ʙᴏᴛ
 /proplay - sᴛᴀʀᴛs ᴘʟᴀʏɪɴɢ ᴄᴏʀɴ ɪɴ ᴠᴄ(ᴠᴏɪᴄᴇ ᴄʜᴀᴛ)
 /pnstop - sᴛᴏᴘs ᴘʟᴀʏɪɴɢ ᴄᴏʀɴ ɪɴ ᴠᴄ(ᴠᴏɪᴄᴇ ᴄʜᴀᴛ)
+'''
 
-<i><b>UPCOMING FEATURE 💦</b></i>
-"""
 
 HELP_4 = """✅<u>**Exᴛʀᴀ  Cᴏᴍᴍᴀɴᴅs:**</u>
 
