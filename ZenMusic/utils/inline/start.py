@@ -2,10 +2,11 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
 
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
+from config import GITHUB_REPO#, SUPPORT_CHANNEL, SUPPORT_GROUP
 from ZenMusic import app
 
-
+SUPPORT_CHANNEL = "https://t.me/ZenBotx"
+SUPPORT_GROUP = "https://t.me/QuirkySquad"
 def start_pannel(_):
     buttons = [
         [
