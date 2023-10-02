@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2023 by ArchBots@Github, < https://github.com/ArchBots >.
-#
-# This file is part of < https://github.com/ArchBots/ZenMusic > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/ArchBots/ZenMusic/blob/master/LICENSE >
-#
-# All rights reserved.
-
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
@@ -62,7 +53,8 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_8"], callback_data="settings_back_helper"
+                text=_["S_B_5"],
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ]
     ]
@@ -97,8 +89,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons.append(
         [
             InlineKeyboardButton(
-                text=_["S_B_5"],
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                text=_["S_B_8"], callback_data="settings_back_helper",
             )
         ]
     )
