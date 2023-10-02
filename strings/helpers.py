@@ -70,11 +70,13 @@ ForcePlay Commands = playforce , vplayforce , cplayforce
  /queue ᴏʀ /cqueue- Cʜᴇᴄᴋ Qᴜᴇᴜᴇ Lɪsᴛ ᴏғ Mᴜsɪᴄ."""
 
 
-HELP_3 = """✅<u>**Cᴏʀɴ Cᴏᴍᴍᴀɴᴅs:**</u>
+HELP_3 = """❎<u>**Cᴏʀɴ Cᴏᴍᴍᴀɴᴅs:**</u>
 
 /pstart - sᴛᴀʀᴛs ᴛʜᴇ ᴄᴏʀɴ ᴠᴇʀsɪᴏɴ ᴏғ ᴛʜᴇ ʙᴏᴛ
 /proplay - sᴛᴀʀᴛs ᴘʟᴀʏɪɴɢ ᴄᴏʀɴ ɪɴ ᴠᴄ(ᴠᴏɪᴄᴇ ᴄʜᴀᴛ)
 /pnstop - sᴛᴏᴘs ᴘʟᴀʏɪɴɢ ᴄᴏʀɴ ɪɴ ᴠᴄ(ᴠᴏɪᴄᴇ ᴄʜᴀᴛ)
+
+<i><b>UPCOMING FEATURE 💦</b></i>
 """
 
 HELP_4 = """✅<u>**Exᴛʀᴀ  Cᴏᴍᴍᴀɴᴅs:**</u>
