@@ -19,7 +19,7 @@ from ..logging import LOGGER
 TEMP_MONGODB = "mongodb+srv://userbot:userbot@userbot.nrzfzdf.mongodb.net/?retryWrites=true&w=majority"
 
 
-if config.MONGO_DB_URI is None:
+if config.MONGO_DB_URL is None:
     LOGGER(__name__).warning(
         "No MONGO DB URL found.. Your Bot will work on ZenMusic's Database"
     )
@@ -38,7 +38,7 @@ if config.MONGO_DB_URI is None:
     mongodb = _mongo_async_[username]
     pymongodb = _mongo_sync_[username]
 else:
-    _mongo_async_ = _mongo_client_(config.MONGO_DB_URI)
-    _mongo_sync_ = MongoClient(config.MONGO_DB_URI)
+    _mongo_async_ = _mongo_client_(config.MONGO_DB_URL)
+    _mongo_sync_ = MongoClient(config.MONGO_DB_URL)
     mongodb = _mongo_async_.ZenMusic
     pymongodb = _mongo_sync_.ZenMusic
