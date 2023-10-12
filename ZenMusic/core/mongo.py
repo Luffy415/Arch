@@ -19,9 +19,9 @@ from ..logging import LOGGER
 TEMP_MONGODB = "mongodb+srv://userbot:userbot@userbot.nrzfzdf.mongodb.net/?retryWrites=true&w=majority"
 
 
-if config.MONGO_DB_URL is None:
+if config.MONGO_DB_URI is None:
     LOGGER(__name__).warning(
-        "No MONGO DB URL found.. Your Bot will work on ZenMusic's Database"
+        "No MONGO DB URI found.. Your Bot will work on ZenMusic's Database"
     )
     temp_client = Client(
         "ZenMusic",
