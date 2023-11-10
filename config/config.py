@@ -92,7 +92,7 @@ SUPPORT_GROUP = getenv(
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "true")
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 
 # Time after which you're assistant account will leave chats automatically.
 
@@ -186,7 +186,7 @@ SET_CMDS = getenv("SET_CMDS", False)
 
 STRING1 = getenv("STRING_SESSION", "")
 
-STRING2 = getenv("STRING_SESSION2", "BQDDi6AL1jhw3SPMJM93n5Q3JiBZRH_8ndWApiJTZJpJQOGCg8Ebn82BPK2lgYyEG86ODJZeNX4GFmZ1HSgDEwIUc5A-ufR2kLxy4KYUblNHj1Mw0jPYJgprWtPIoUw5IfdGMdQvVR4A-xgatfl89CEqmP1BXuTHHRafqfL8vtxl8yrYvjQbQmNU3XBNLQrosVhFn5LPAhRyMufGwYeU58k65zK8vyru_auvPki3xb2ZhrOLw1zMdag7XKPD_hk-Wr1Brxgd7M4Fh_Ww_BfP4afgCncDAD0luNnYkjKKZ8CWCLPZqExJKwidA6gRysDTprW6kxEUR0Y-owrz3HqAuu0bAAAAAZ9lhUYA")
+STRING2 = getenv("STRING_SESSION2", "BQCFe8ThHURApXAhp5K9J5aSGERXXvd5BaQY1jGmtmZJmtX-kIhS5ir3p-DkGqKqRSGenRAS64SQ6YlATQjj634QZkFPdsz3uN1XTXvxa-cqcbVLLheAH955lM-htRZUHIlUomNjPMys-IEfwFRBKoU0gUA5uJ_N0xs9sHTy2VAC6wvCw544BgqnVodm-16dPiOuppf5MKLkDNhbw1xC3CnA6koUGCyVrsSxnB41_ITeTuRGx1tbyQIo72Z5fISfV-fn14T8In0l4hYY1erph2r9CnpzbppIhGTMwo2chsdn9WDHqUfX_XH8R0fhQFkMOK-FKgyEe8qeLiY7WZM6TD1qAAAAAZ9lhUYA")
 
 STRING3 = getenv("STRING_SESSION3", None)
 
