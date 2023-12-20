@@ -104,8 +104,8 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
 """#                InlineKeyboardButton(
 #                    text=_["S_B_6"], url=f"https://github.com/ArchBots/ZenMusic"
 #                ),
-            ]
-        )
+#            ]
+#        )
     else:
         if GITHUB_REPO:
             buttons.append(
